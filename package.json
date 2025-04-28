@@ -1,0 +1,33 @@
+{
+    "name": "@ahrefs/mcp",
+    "version": "0.0.5",
+    "description": "Ahrefs MCP server",
+    "main": "build/index.js",
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "start": "npm run build && node build/index.js"
+    },
+    "keywords": [
+        "mcp",
+        "model-context-protocol",
+        "openapi",
+        "ahrefs"
+    ],
+    "bin": {
+        "mcp": "build/index.js"
+    },
+    "author": "Ahrefs",
+    "license": "MIT",
+    "files": [
+        "build/"
+    ],
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.8.0",
+        "axios": "^1.8.0"
+    },
+    "devDependencies": {
+        "@types/node": "^22.13.0",
+        "typescript": "^5.7.0"
+    }
+}
