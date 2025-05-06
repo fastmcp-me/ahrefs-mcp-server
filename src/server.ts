@@ -459,11 +459,10 @@ const tools: Tool[] = [
                         "properties": {
                             "url": {
                                 "description": "The URL of the analyzed target.",
-                                "type": "string",
-                                "example": "https://www.ahrefs.com"
+                                "type": "string"
                             },
                             "mode": {
-                                "description": "The target mode used for the analysis.",
+                                "description": "The target mode used for the analysis.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                                 "type": "string",
                                 "enum": [
                                     "exact",
@@ -635,7 +634,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "target_mode": {
-                    "description": "The scope of the target URL you specified.",
+                    "description": "The scope of the target URL you specified.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -1554,7 +1553,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -1633,7 +1632,7 @@ const tools: Tool[] = [
                     ]
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -1751,7 +1750,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -1878,7 +1877,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -2186,7 +2185,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -2348,7 +2347,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -2494,7 +2493,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -2609,7 +2608,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -2720,7 +2719,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -2879,7 +2878,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -3044,7 +3043,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -3205,7 +3204,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -3361,7 +3360,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -3509,7 +3508,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -3653,7 +3652,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -3797,7 +3796,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -3974,7 +3973,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -4175,7 +4174,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -4376,7 +4375,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -4576,7 +4575,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -4751,7 +4750,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -4899,7 +4898,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
@@ -5065,7 +5064,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "mode": {
-                    "description": "The scope of the search based on the target you entered.",
+                    "description": "The scope of the search based on the target you entered.\n- exact: analyze a single specific URL (e.g., example.com/page) - use for individual pages.\n- prefix: analyze all pages under a specific path (e.g., example.com/blog/*) - use for sections of a site.\n- domain: analyze ONLY the exact domain entered WITHOUT any subdomains - use when you want to exclude subdomains from analysis.\n- subdomains: analyze the main domain AND ALL its subdomains - use by default.",
                     "type": "string",
                     "enum": [
                         "exact",
