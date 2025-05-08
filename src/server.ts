@@ -1320,6 +1320,274 @@ const tools: Tool[] = [
         "_original_parameters": [
             {
                 "in": "query",
+                "name": "owned_by",
+                "required": false
+            },
+            {
+                "in": "query",
+                "name": "access",
+                "required": false
+            },
+            {
+                "in": "query",
+                "name": "has_keywords",
+                "required": false
+            },
+            {
+                "in": "query",
+                "name": "project_id",
+                "required": false
+            },
+            {
+                "in": "query",
+                "name": "output",
+                "required": false
+            }
+        ],
+        "_original_path": "management/projects",
+        "_original_request_body": null,
+        "description": "Projects. Use doc tool first to get the real input schema.",
+        "inputSchema": {
+            "properties": {
+                "owned_by": {
+                    "type": "string"
+                },
+                "access": {
+                    "type": "string"
+                },
+                "has_keywords": {
+                    "type": "boolean"
+                },
+                "project_id": {
+                    "type": "integer"
+                }
+            },
+            "required": [],
+            "type": "object"
+        },
+        "_inputSchema": {
+            "properties": {
+                "owned_by": {
+                    "description": "The email of the project owner.",
+                    "type": "string"
+                },
+                "access": {
+                    "description": "The access type of the project.",
+                    "type": "string",
+                    "enum": [
+                        "private",
+                        "shared"
+                    ]
+                },
+                "has_keywords": {
+                    "description": "Has Rank Tracker keywords.",
+                    "type": "boolean"
+                },
+                "project_id": {
+                    "description": "The unique identifier of the project. You can find it in the URL of your Rank Tracker project in Ahrefs: `https://app.ahrefs.com/rank-tracker/overview/#project_id#`",
+                    "type": "integer"
+                }
+            },
+            "required": [],
+            "type": "object"
+        },
+        "name": "management-projects"
+    },
+    {
+        "_original_method": "GET",
+        "_original_parameters": [
+            {
+                "in": "query",
+                "name": "project_id",
+                "required": true
+            },
+            {
+                "in": "query",
+                "name": "output",
+                "required": false
+            }
+        ],
+        "_original_path": "management/project-keywords",
+        "_original_request_body": null,
+        "description": "Keywords. Use doc tool first to get the real input schema.",
+        "inputSchema": {
+            "properties": {
+                "project_id": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "project_id"
+            ],
+            "type": "object"
+        },
+        "_inputSchema": {
+            "properties": {
+                "project_id": {
+                    "description": "The unique identifier of the project. You can find it in the URL of your Rank Tracker project in Ahrefs: `https://app.ahrefs.com/rank-tracker/overview/#project_id#`",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "project_id"
+            ],
+            "type": "object"
+        },
+        "name": "management-project-keywords"
+    },
+    {
+        "_original_method": "GET",
+        "_original_parameters": [
+            {
+                "in": "query",
+                "name": "us_state",
+                "required": false
+            },
+            {
+                "in": "query",
+                "name": "country_code",
+                "required": true
+            },
+            {
+                "in": "query",
+                "name": "output",
+                "required": false
+            }
+        ],
+        "_original_path": "management/locations",
+        "_original_request_body": null,
+        "description": "Locations and languages. Use doc tool first to get the real input schema.",
+        "inputSchema": {
+            "properties": {
+                "us_state": {
+                    "type": "string"
+                },
+                "country_code": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "country_code"
+            ],
+            "type": "object"
+        },
+        "_inputSchema": {
+            "properties": {
+                "us_state": {
+                    "description": "A two-letter US state code (ISO 3166-2:US). Required only if `country_code` is set to `us`",
+                    "type": "string",
+                    "enum": [
+                        "al",
+                        "ak",
+                        "az",
+                        "ar",
+                        "ca",
+                        "co",
+                        "ct",
+                        "de",
+                        "dc",
+                        "fl",
+                        "ga",
+                        "hi",
+                        "id",
+                        "il",
+                        "in",
+                        "ia",
+                        "ks",
+                        "ky",
+                        "la",
+                        "me",
+                        "md",
+                        "ma",
+                        "mi",
+                        "mn",
+                        "ms",
+                        "mo",
+                        "mt",
+                        "ne",
+                        "nv",
+                        "nh",
+                        "nj",
+                        "nm",
+                        "ny",
+                        "nc",
+                        "nd",
+                        "oh",
+                        "ok",
+                        "or",
+                        "pa",
+                        "ri",
+                        "sc",
+                        "sd",
+                        "tn",
+                        "tx",
+                        "ut",
+                        "va",
+                        "wa",
+                        "wv",
+                        "wi",
+                        "wy"
+                    ]
+                },
+                "country_code": {
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "country_code"
+            ],
+            "type": "object"
+        },
+        "name": "management-locations"
+    },
+    {
+        "_original_method": "GET",
+        "_original_parameters": [
+            {
+                "in": "query",
+                "name": "project_id",
+                "required": true
+            },
+            {
+                "in": "query",
+                "name": "output",
+                "required": false
+            }
+        ],
+        "_original_path": "management/project-competitors",
+        "_original_request_body": null,
+        "description": "Competitors. Use doc tool first to get the real input schema.",
+        "inputSchema": {
+            "properties": {
+                "project_id": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "project_id"
+            ],
+            "type": "object"
+        },
+        "_inputSchema": {
+            "properties": {
+                "project_id": {
+                    "description": "The unique identifier of the project. You can find it in the URL of your Rank Tracker project in Ahrefs: `https://app.ahrefs.com/rank-tracker/overview/#project_id#`",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "project_id"
+            ],
+            "type": "object"
+        },
+        "name": "management-project-competitors"
+    },
+    {
+        "_original_method": "GET",
+        "_original_parameters": [
+            {
+                "in": "query",
                 "name": "select",
                 "required": true
             },
