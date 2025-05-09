@@ -15,12 +15,12 @@ npm -v
 4. A version number will be printed if installation was successful
 ### Install Ahrefs MCP Server
 ```sh
-npm install @ahrefs/mcp -g
+npm install --prefix=~/.global-node-modules @ahrefs/mcp -g
 ```
 ### Upgrading versions
 If you've installed our MCP server before, and just want to upgrade, run this command:
 ```sh
-npm install @ahrefs/mcp@latest -g
+npm install --prefix=~/.global-node-modules @ahrefs/mcp@latest -g
 ```
 
 ## Configuration
@@ -31,6 +31,7 @@ You can now add the Ahrefs MCP to your favourite AI assistant app by adding the 
         "ahrefs": {
             "command": "npx",
             "args": [
+                "--prefix=~/.global-node-modules",
                 "@ahrefs/mcp"
             ],
             "env": {
