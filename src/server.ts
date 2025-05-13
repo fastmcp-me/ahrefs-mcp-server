@@ -81,7 +81,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "rank-tracker/overview",
         "_original_request_body": null,
-        "description": "Overview. Use doc tool first to get the real input schema.",
+        "description": "Provides an overview of tracked keyword rankings and related search metrics for a specified project and date, with support for historical comparison, filtering, column selection, and device type. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -252,7 +252,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "rank-tracker/competitors-overview",
         "_original_request_body": null,
-        "description": "Competitors overview. Use doc tool first to get the real input schema.",
+        "description": "Provides an overview of competitor rankings and keyword metrics for a specified project and date in Ahrefs Rank Tracker, allowing comparison between current and previous data. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -396,7 +396,7 @@ const tools: Tool[] = [
             "required": true,
             "content_type": "application/json"
         },
-        "description": "Batch Analysis. Use doc tool first to get the real input schema.",
+        "description": "Performs a batch analysis of multiple URLs, domains, or subdomains to retrieve selected SEO, backlink, organic, and paid traffic metrics. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "select": {
@@ -568,7 +568,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "keywords-explorer/overview",
         "_original_request_body": null,
-        "description": "Overview. Use doc tool first to get the real input schema.",
+        "description": "Provides an overview of keyword metrics—including search volume, CPC, ranking difficulty, traffic potential, and intent—for specified keywords, domains, or URLs within a given country. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -707,7 +707,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "keywords-explorer/volume-history",
         "_original_request_body": null,
-        "description": "Volume history. Use doc tool first to get the real input schema.",
+        "description": "Retrieves historical search volume data for a specified keyword within a given country and date range. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "date_to": {
@@ -784,7 +784,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "keywords-explorer/volume-by-country",
         "_original_request_body": null,
-        "description": "Volume by country. Use doc tool first to get the real input schema.",
+        "description": "Retrieves search volume metrics for a specified keyword broken down by country. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "limit": {
@@ -888,7 +888,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "keywords-explorer/matching-terms",
         "_original_request_body": null,
-        "description": "Matching terms. Use doc tool first to get the real input schema.",
+        "description": "Retrieves keyword ideas and their associated SEO metrics by matching input terms or phrases in a specified country, with extensive support for filtering, sorting, and metric selection. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -1053,7 +1053,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "keywords-explorer/related-terms",
         "_original_request_body": null,
-        "description": "Related terms. Use doc tool first to get the real input schema.",
+        "description": "Returns keyword metrics and related terms—such as \"also rank for\" keywords and \"also talk about\" keywords—for a given keyword or keyword list, with filtering and sorting options. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -1214,7 +1214,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "keywords-explorer/search-suggestions",
         "_original_request_body": null,
-        "description": "Search suggestions. Use doc tool first to get the real input schema.",
+        "description": "Provides keyword search suggestions and related keyword metrics (e.g., search volume, difficulty, CPC) for specified queries or keyword lists, with options to filter, sort, and customize returned fields by country. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -1302,7 +1302,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-audit/projects",
         "_original_request_body": null,
-        "description": "Project Health Scores. Use doc tool first to get the real input schema.",
+        "description": "Retrieves a list of site audit projects available in the system. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {},
             "required": [],
@@ -1346,7 +1346,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "management/projects",
         "_original_request_body": null,
-        "description": "Projects. Use doc tool first to get the real input schema.",
+        "description": "Retrieves information about existing projects, including ownership, access type, presence of Rank Tracker keywords, and project ID. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "owned_by": {
@@ -1409,7 +1409,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "management/project-keywords",
         "_original_request_body": null,
-        "description": "Keywords. Use doc tool first to get the real input schema.",
+        "description": "Retrieves keywords associated with a specific project in Ahrefs' Rank Tracker by project ID. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "project_id": {
@@ -1456,7 +1456,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "management/locations",
         "_original_request_body": null,
-        "description": "Locations and languages. Use doc tool first to get the real input schema.",
+        "description": "Retrieves a list of management locations filtered by country code and optionally by US state. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "us_state": {
@@ -1557,7 +1557,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "management/project-competitors",
         "_original_request_body": null,
-        "description": "Competitors. Use doc tool first to get the real input schema.",
+        "description": "Retrieves the list of competitors associated with a specific Rank Tracker project in Ahrefs, using the project's unique identifier. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "project_id": {
@@ -1619,7 +1619,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "serp-overview/serp-overview",
         "_original_request_body": null,
-        "description": "SERP Overview. Use doc tool first to get the real input schema.",
+        "description": "Returns an overview of the top search results (SERP) for a specified keyword and country, including detailed metrics about each result like position, backlinks, traffic, domain rating, and related keywords. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "select": {
@@ -1704,7 +1704,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/domain-rating",
         "_original_request_body": null,
-        "description": "Domain rating. Use doc tool first to get the real input schema.",
+        "description": "Retrieves the domain rating and related metrics for a specified domain or URL as of a specific date. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "protocol": {
@@ -1783,7 +1783,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/backlinks-stats",
         "_original_request_body": null,
-        "description": "Backlinks stats. Use doc tool first to get the real input schema.",
+        "description": "Provides backlink statistics for a specified URL or domain as of a given date, with options to control protocol and scope. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "protocol": {
@@ -1870,7 +1870,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/outlinks-stats",
         "_original_request_body": null,
-        "description": "Outlinks stats. Use doc tool first to get the real input schema.",
+        "description": "Retrieves statistical data about the outbound links (outlinks) from a specified URL, domain, or site section. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "protocol": {
@@ -1962,7 +1962,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/metrics",
         "_original_request_body": null,
-        "description": "Metrics. Use doc tool first to get the real input schema.",
+        "description": "Provides SEO performance metrics for a specified domain, URL, or site section as of a given date, with options to customize search scope, protocol, country, and search volume mode. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "volume_mode": {
@@ -2082,7 +2082,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/refdomains-history",
         "_original_request_body": null,
-        "description": "Refdomains history. Use doc tool first to get the real input schema.",
+        "description": "Provides historical data on referring domains linking to a specified target (domain or URL) over a defined date range, with customizable grouping and analysis scope. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "history_grouping": {
@@ -2194,7 +2194,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/domain-rating-history",
         "_original_request_body": null,
-        "description": "Domain Rating history. Use doc tool first to get the real input schema.",
+        "description": "Retrieves the historical domain rating data for a specified domain or URL over a defined date range and grouping interval. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "history_grouping": {
@@ -2281,7 +2281,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/url-rating-history",
         "_original_request_body": null,
-        "description": "URL Rating history. Use doc tool first to get the real input schema.",
+        "description": "Retrieves the historical URL rating data for a specified domain or URL over a defined date range, grouped by a chosen time interval. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "history_grouping": {
@@ -2383,7 +2383,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/pages-history",
         "_original_request_body": null,
-        "description": "Pages history. Use doc tool first to get the real input schema.",
+        "description": "Retrieves historical data about pages from a specified domain, URL, or section of a site, grouped by a chosen time interval. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "history_grouping": {
@@ -2527,7 +2527,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/metrics-history",
         "_original_request_body": null,
-        "description": "Metrics history. Use doc tool first to get the real input schema.",
+        "description": "Retrieves historical data on key organic and paid search traffic and cost metrics for a specified domain, URL, or path over a selectable date range and grouping interval. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "select": {
@@ -2684,7 +2684,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/keywords-history",
         "_original_request_body": null,
-        "description": "Keywords history. Use doc tool first to get the real input schema.",
+        "description": "Retrieves historical data on the number of organic keywords a specified website or URL has ranked for, segmented by various search position ranges and grouped by a chosen time interval. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "select": {
@@ -2820,7 +2820,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/metrics-by-country",
         "_original_request_body": null,
-        "description": "Metrics by country. Use doc tool first to get the real input schema.",
+        "description": "Provides organic and paid search performance metrics for a specified website, broken down by country, for a specific date. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "select": {
@@ -2935,7 +2935,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/pages-by-traffic",
         "_original_request_body": null,
-        "description": "Pages by traffic. Use doc tool first to get the real input schema.",
+        "description": "Retrieves pages from a specified domain, subdomain, path, or exact URL, ranked by their estimated organic search traffic for a selected country and protocol. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "volume_mode": {
@@ -3070,7 +3070,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/all-backlinks",
         "_original_request_body": null,
-        "description": "Backlinks. Use doc tool first to get the real input schema.",
+        "description": "Retrieves detailed information about all backlinks pointing to a specified URL or domain, with extensive filtering, sorting, selection, and aggregation options. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -3238,7 +3238,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/broken-backlinks",
         "_original_request_body": null,
-        "description": "Broken Backlinks. Use doc tool first to get the real input schema.",
+        "description": "Retrieves a list of broken backlinks (i.e., links pointing to non-functioning pages) for a specified domain or URL, with customizable filtering, field selection, and aggregation options. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -3399,7 +3399,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/refdomains",
         "_original_request_body": null,
-        "description": "Refdomains. Use doc tool first to get the real input schema.",
+        "description": "Retrieves detailed information about referring domains that link to a specified target domain or URL, with flexible filtering, selection, and sorting of backlink-related metrics. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -3555,7 +3555,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/anchors",
         "_original_request_body": null,
-        "description": "Anchors. Use doc tool first to get the real input schema.",
+        "description": "Retrieves anchor text and associated backlink metrics for a specified domain or URL, with filtering and selection options. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -3706,7 +3706,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/linkeddomains",
         "_original_request_body": null,
-        "description": "Linked Domains. Use doc tool first to get the real input schema.",
+        "description": "Retrieves information about external domains that are linked from a specified target domain or URL, allowing for filtering, field selection, and various scopes of analysis. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -3850,7 +3850,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/linked-anchors-external",
         "_original_request_body": null,
-        "description": "Outgoing external anchors. Use doc tool first to get the real input schema.",
+        "description": "Retrieves data about external anchor text (the clickable words in outbound links) used on a specified domain, subdomain, or URL, including metrics like dofollow link counts, distinct linked domains, and other attributes about the links. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -3994,7 +3994,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/linked-anchors-internal",
         "_original_request_body": null,
-        "description": "Outgoing internal anchors. Use doc tool first to get the real input schema.",
+        "description": "Retrieves internal anchor text data for a given website or URL, detailing how anchor texts are used in links between pages on the same site. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -4158,7 +4158,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/organic-keywords",
         "_original_request_body": null,
-        "description": "Organic keywords. Use doc tool first to get the real input schema.",
+        "description": "Retrieves detailed organic keyword data for a given domain, URL, or path, including rankings, search intent, SERP features, traffic and CPC metrics, with the ability to filter, sort, and compare metrics across dates and regions. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -4358,7 +4358,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/organic-competitors",
         "_original_request_body": null,
-        "description": "Organic competitors. Use doc tool first to get the real input schema.",
+        "description": "Retrieves a list of organic search competitors for a specified website or URL, providing comparative SEO metrics such as common keywords, traffic estimations, and domain strength for a chosen country and date. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -4560,7 +4560,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/top-pages",
         "_original_request_body": null,
-        "description": "Top pages. Use doc tool first to get the real input schema.",
+        "description": "Returns a list of the top-performing pages for a specified website or URL, including detailed SEO metrics (such as organic rankings, traffic, top keyword, and changes over time), with support for comparison between two dates and flexible filtering. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -4760,7 +4760,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/paid-pages",
         "_original_request_body": null,
-        "description": "Paid pages. Use doc tool first to get the real input schema.",
+        "description": "Returns detailed metrics about pages on a specified site or URL that are ranking in paid search results, including traffic, keyword data, ad presence, and changes over time, with powerful filtering and comparison capabilities. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -4945,7 +4945,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/best-by-external-links",
         "_original_request_body": null,
-        "description": "Best by External Links. Use doc tool first to get the real input schema.",
+        "description": "Returns a list of a site's or URL's best-performing pages, ranked by the number of referring external links, with flexible filtering and sorting options. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -5096,7 +5096,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/best-by-internal-links",
         "_original_request_body": null,
-        "description": "Best by Internal Links. Use doc tool first to get the real input schema.",
+        "description": "Retrieves a site's or page's internal link metrics, allowing analysis of how pages within the given domain or URL are interconnected and which pages receive the most internal links. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "timeout": {
@@ -5240,7 +5240,7 @@ const tools: Tool[] = [
         ],
         "_original_path": "site-explorer/total-search-volume-history",
         "_original_request_body": null,
-        "description": "Total search volume history. Use doc tool first to get the real input schema.",
+        "description": "Retrieves the historical total organic search volume, traffic, and traffic value for a given site or URL over a specified time period and grouping. Use doc tool first to get the real input schema.",
         "inputSchema": {
             "properties": {
                 "volume_mode": {

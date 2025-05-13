@@ -1,6 +1,6 @@
 {
     "name": "@ahrefs/mcp",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "Ahrefs MCP server",
     "main": "build/index.js",
     "type": "module",
