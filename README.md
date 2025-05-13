@@ -44,10 +44,26 @@ You can now add the Ahrefs MCP to your favourite AI assistant app by adding the 
 To learn more about creating or controlling API keys, refer to the [official documentation](https://docs.ahrefs.com/docs/api/reference/api-keys-creation-and-management).
 ### Where to find the configuration file
 #### Claude Desktop
-If you have not used any MCP servers before, please start by following the [official documentation](https://modelcontextprotocol.io/quickstart/user). 
-You will then be able to find the MCP configuration file at:
+1. Download Claude for Desktop
+2. Select `Settings...`
+
+<p align="center">
+  <img src="images/claude1.png" alt="Open the Claude menu"/>
+</p>
+
+3. Click on `Developer` in the left panel, then `Edit Config`
+
+<p align="center">
+  <img src="images/claude2.png" alt="Open the MCP config file"/>
+</p>
+
+4. Paste the configuration [above](#configuration) into the open file
+
+If you prefer directly navigating to the file, the paths are:
 - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+
+If there are any issues, please refer to the [official documentation](https://modelcontextprotocol.io/quickstart/user)
 #### Cursor
 Cursor supports configurations that are either project-specific or global: the MCP configuration file will be at `.cursor/mcp.json` or `~/.cursor/mcp.json` respectively.
 For more details, read the [official documentation](docs.cursor.com/context/model-context-protocol).
