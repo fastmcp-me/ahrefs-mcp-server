@@ -59,6 +59,12 @@ To learn more about creating or controlling API keys, refer to the [official doc
 
 4. Paste the configuration [above](#configuration) into the open file
 
+5. Restart the Claude app! If the installation is successful, it should look like this:
+
+<p align="center">
+  <img src="images/claude3.png" alt="ahrefs MCP appears under 'tools'"/>
+</p>
+
 If you prefer directly navigating to the file, the paths are:
 - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
