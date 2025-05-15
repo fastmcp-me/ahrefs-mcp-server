@@ -435,7 +435,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "volume_mode": {
@@ -656,7 +656,7 @@ const tools: Tool[] = [
                     ]
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "keywords": {
@@ -742,7 +742,7 @@ const tools: Tool[] = [
                     "format": "date"
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "keyword": {
@@ -951,7 +951,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "keywords": {
@@ -1116,7 +1116,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "keywords": {
@@ -1271,7 +1271,7 @@ const tools: Tool[] = [
                     "type": "string"
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "keywords": {
@@ -1474,63 +1474,11 @@ const tools: Tool[] = [
         "_inputSchema": {
             "properties": {
                 "us_state": {
-                    "description": "A two-letter US state code (ISO 3166-2:US). Required only if `country_code` is set to `us`",
-                    "type": "string",
-                    "enum": [
-                        "al",
-                        "ak",
-                        "az",
-                        "ar",
-                        "ca",
-                        "co",
-                        "ct",
-                        "de",
-                        "dc",
-                        "fl",
-                        "ga",
-                        "hi",
-                        "id",
-                        "il",
-                        "in",
-                        "ia",
-                        "ks",
-                        "ky",
-                        "la",
-                        "me",
-                        "md",
-                        "ma",
-                        "mi",
-                        "mn",
-                        "ms",
-                        "mo",
-                        "mt",
-                        "ne",
-                        "nv",
-                        "nh",
-                        "nj",
-                        "nm",
-                        "ny",
-                        "nc",
-                        "nd",
-                        "oh",
-                        "ok",
-                        "or",
-                        "pa",
-                        "ri",
-                        "sc",
-                        "sd",
-                        "tn",
-                        "tx",
-                        "ut",
-                        "va",
-                        "wa",
-                        "wv",
-                        "wi",
-                        "wy"
-                    ]
+                    "description": "A two-letter US state code (ISO 3166-2:US): \"AL\" .. \"WY\". Required only if `country_code` is set to `US`",
+                    "type": "string"
                 },
                 "country_code": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 }
             },
@@ -1661,7 +1609,7 @@ const tools: Tool[] = [
                     "format": "date-time"
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "keyword": {
@@ -2001,7 +1949,7 @@ const tools: Tool[] = [
                     ]
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "protocol": {
@@ -2436,7 +2384,7 @@ const tools: Tool[] = [
                     "format": "date"
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "protocol": {
@@ -2598,7 +2546,7 @@ const tools: Tool[] = [
                     "format": "date"
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "protocol": {
@@ -2744,7 +2692,7 @@ const tools: Tool[] = [
                     "format": "date"
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "protocol": {
@@ -2970,7 +2918,7 @@ const tools: Tool[] = [
                     ]
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "protocol": {
@@ -4251,7 +4199,7 @@ const tools: Tool[] = [
                     ]
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "date_compared": {
@@ -4452,7 +4400,7 @@ const tools: Tool[] = [
                     ]
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "date_compared": {
@@ -4653,7 +4601,7 @@ const tools: Tool[] = [
                     ]
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "date_compared": {
@@ -4853,7 +4801,7 @@ const tools: Tool[] = [
                     ]
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "date_compared": {
@@ -5315,7 +5263,7 @@ const tools: Tool[] = [
                     "format": "date"
                 },
                 "country": {
-                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"ad\" .. \"zw\"",
+                    "description": "A two-letter country code (ISO 3166-1 alpha-2): \"AD\" .. \"ZW\"",
                     "type": "string"
                 },
                 "protocol": {
@@ -5482,7 +5430,12 @@ export class OpenApiMcpServer {
                 for (const param of originalParameters) {
                     const paramName = param.name;
                     const paramIn = param.in; // path, query, header
-                    const paramValue = args[paramName];
+                    let paramValue = args[paramName];
+
+                    // Lowercase specific parameters
+                    if (paramValue !== undefined && paramValue !== null && ["us_state", "country", "country_code"].includes(paramName)) {
+                        paramValue = String(paramValue).toLowerCase();
+                    }
 
                     if (paramValue !== undefined && paramValue !== null) {
                         if (paramIn === 'path') {
