@@ -73,3 +73,210 @@ If there are any issues, please refer to the [official documentation](https://mo
 #### Cursor
 Cursor supports configurations that are either project-specific or global: the MCP configuration file will be at `.cursor/mcp.json` or `~/.cursor/mcp.json` respectively.
 For more details, read the [official documentation](docs.cursor.com/context/model-context-protocol).
+
+## Common Installation Issues & Fixes
+
+### 1. Node.js or npm Not Installed / Recognized
+
+**Symptoms:**
+- Running `npm -v` shows an error like `command not found` or `'npm' is not recognized`.
+
+**Fix:**
+- Ensure you've installed Node.js from [nodejs.org](https://nodejs.org/en/download/).
+- Restart your terminal after installation.
+- On **Windows**, make sure the Node.js installer added `npm` to your PATH.
+
+**Platform-Specific Checks:**
+- **Windows:**
+  Open Command Prompt (`Win + R → cmd`) and run:
+  ```
+  node -v
+  npm -v
+  ```
+- **macOS/Linux:**
+  Open Terminal and run:
+  ```
+  which node && which npm
+  ```
+If it returns nothing, Node.js may not be in your `$PATH`.
+
+---
+
+### 2. Permission Errors During Global Installation
+
+**Symptoms:**
+- Errors like `EACCES: permission denied`, especially on macOS or Linux.
+
+**Fix:**
+- Install using a user-scoped global prefix as shown in the installation guide:
+  ```sh
+  npm install --prefix=~/.global-node-modules @ahrefs/mcp -g
+  ```
+- This avoids requiring elevated privileges (`sudo`).
+
+**Extra Tip:**
+If you used `sudo` previously and created permission issues, reset folder ownership:
+```sh
+sudo chown -R $(whoami) ~/.global-node-modules
+```
+### 2a. macOS Terminal Permissions
+
+**Symptoms:**
+- Terminal shows "Operation not permitted" errors
+- Unable to create folders or files
+- Permission denied messages when running npm commands
+
+**Fix:**
+Check if Terminal has Full Disk Access:
+  - Open System Settings (or System Preferences)
+  - Go to Privacy & Security → Full Disk Access
+  - Make sure Terminal.app is in the list and checked
+  - If not present, click '+', navigate to Applications → Utilities → Terminal.app
+
+**Note:**
+Modern macOS versions require explicit permissions for Terminal access. Without proper permissions, npm installations and other file operations may fail silently or with permission errors.
+
+---
+
+### 3. `npx` Cannot Find the Ahrefs MCP Command
+
+**Symptoms:**
+- Error: `Cannot find package '@ahrefs/mcp'`
+
+**Fix:**
+Ensure your config uses the same prefix used during install:
+```json
+"command": "npx",
+"args": [
+  "--prefix=~/.global-node-modules",
+  "@ahrefs/mcp"
+]
+```
+
+**Note:**
+Do **not** omit the `--prefix` unless you're installing globally system-wide (not recommended).
+
+---
+
+### 4. Configuration File Not Detected
+
+**Symptoms:**
+- Claude does not list the MCP under “tools”.
+
+**Fix:**
+- Make sure the config file path is correct:
+  - **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+  - **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+  - **Linux:** (Rare, but if applicable) `~/.config/Claude/claude_desktop_config.json`
+- Double-check you pasted the configuration **inside the correct section** and restarted Claude after saving.
+
+---
+
+### 5. API Key Problems
+
+**Symptoms:**
+- MCP fails silently or throws an error about `API_KEY`.
+- Claude responds with a message that it ran into authentication issues.
+
+**Fix:**
+Ensure this line is present in the MCP config:
+```json
+"env": {
+  "API_KEY": "YOUR_API_KEY_HERE"
+}
+```
+Replace `YOUR_API_KEY_HERE` with your actual key. Ensure that your API key settings give you the necessary permissions.
+
+For more help, refer to [Ahrefs API key docs](https://docs.ahrefs.com/docs/api/reference/api-keys-creation-and-management).
+
+---
+
+### 6. Path Expansion Issues
+
+**Symptoms:**
+- Error messages containing `ENOENT` or "no such file or directory"
+- npm commands fail with path-related errors
+- `~` or environment variables not being expanded correctly
+
+**Fix:**
+Use absolute paths instead of relying on path expansion:
+
+**Windows:**
+```sh
+C:\Users\<username>\.global-node-modules
+```
+Replace `<username>` with your actual Windows username.
+
+**macOS:**
+```sh
+/Users/<username>/.global-node-modules
+```
+Replace `<username>` with your macOS username.
+
+**Linux:**
+```sh
+/home/<username>/.global-node-modules
+```
+Replace `<username>` with your Linux username.
+
+**Example Configuration:**
+```json
+{
+    "mcpServers": {
+        "ahrefs": {
+            "command": "npx",
+            "args": [
+                "--prefix=/Users/username/.global-node-modules",  // Replace with your absolute path
+                "@ahrefs/mcp"
+            ],
+            "env": {
+                "API_KEY": "YOUR_API_KEY_HERE"
+            }
+        }
+    }
+}
+```
+
+**How to Find Your Absolute Path:**
+
+**Windows:**
+1. Open Command Prompt
+2. Type `echo %USERPROFILE%`
+
+**macOS/Linux:**
+1. Open Terminal
+2. Type `echo $HOME`
+
+**Note:**
+Using absolute paths eliminates issues with path expansion and ensures the configuration works regardless of environment variables or shell configurations.
+
+---
+
+## 🧪 Diagnostic Commands Per Platform
+
+| Issue | Windows Command | macOS/Linux Command |
+|-------|-----------------|---------------------|
+| Check Node version | `node -v && npm -v` | `node -v && npm -v` |
+| Check if MCP is installed | `npm list -g --prefix=%USERPROFILE%\.global-node-modules @ahrefs/mcp` | `npm list -g --prefix=~/.global-node-modules @ahrefs/mcp`|
+| Clear corrupted install | Delete folder manually | `rm -rf ~/.global-node-modules` |
+
+---
+
+## 📍 Summary of Key Paths
+
+| Purpose  | Windows | macOS | Linux |
+|----------|---------|-------|-------|
+| Claude config file | `%APPDATA%\Claude\claude_desktop_config.json` | `~/Library/Application Support/Claude/claude_desktop_config.json` | `~/.config/Claude/claude_desktop_config.json` (if applicable) |
+| Global MCP install location | `%USERPROFILE%\.global-node-modules` | `~/.global-node-modules` | `~/.global-node-modules` |
+
+---
+
+## 📘 Still Having Issues?
+
+- Check the [official MCP documentation](https://modelcontextprotocol.io/quickstart/user)
+- Or reach out to internal support at Ahrefs through your usual engineering support channel.
+
+Let us know what errors you're seeing, along with your OS and the output of:
+```sh
+npm list -g --prefix=~/.global-node-modules @ahrefs/mcp
+```
