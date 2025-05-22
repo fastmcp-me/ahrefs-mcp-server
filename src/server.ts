@@ -5421,7 +5421,10 @@ export class OpenApiMcpServer {
             try {
                 let targetPath = originalPath;
                 const queryParams: Record<string, any> = {};
-                const headers: Record<string, string> = { 'Accept': 'application/json' };
+                const headers: Record<string, string> = {
+                    'Accept': 'application/json',
+                    'User-Agent': 'ahrefs-mcp-server'
+                };
                 let requestData: any = undefined;
                 let requestBody: any = args.requestBody;
                 headers["Authorization"] = `Bearer ${API_KEY}`;
