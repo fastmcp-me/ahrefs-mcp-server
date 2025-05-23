@@ -13,6 +13,10 @@ A Model Context Protocol server to connect Claude desktop and other compatible A
 npm -v
 ```
 4. A version number will be printed if installation was successful
+
+#### Windows Users
+- When installing Node.js, use the official installer and make sure the folder is added to PATH when selecting installation options.
+
 ### Install Ahrefs MCP Server
 ```sh
 npm install --prefix=~/.global-node-modules @ahrefs/mcp -g
@@ -41,6 +45,29 @@ You can now add the Ahrefs MCP to your favourite AI assistant app by adding the 
     }
 }
 ```
+
+### Specific for Windows OS
+```json
+{
+    "mcpServers": {
+        "ahrefs": {
+            "command": "npx",
+            "args": [
+                "--prefix=C:\\Users\\YOUR_USERNAME_HERE\\.global-node-modules\\node_modules",
+                "@ahrefs/mcp"
+            ],
+            "env": {
+                "API_KEY": "YOUR_API_KEY_HERE"
+            }
+        }
+    }
+}
+```
+1. Take note of the double escape backslashes
+2. Take note that the prefix directory is slightly different
+3. Take note of the forward slash for `@ahrefs/mcp`
+4. If you are working with Claude Desktop, run Ctrl-Alt-Del to open Task Manager and kill Claude Desktop. Otherwise, your newly changed config will not be loaded.
+
 To learn more about creating or controlling API keys, refer to the [official documentation](https://docs.ahrefs.com/docs/api/reference/api-keys-creation-and-management).
 ### Where to find the configuration file
 #### Claude Desktop
